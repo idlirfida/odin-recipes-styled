@@ -1,64 +1,83 @@
-body {
-    background-color: bisque;
-    color:cadetblue;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: justify;
-    width: 60%;
-    margin: 3rem auto;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #F5F5F5;
+    padding: 1rem;
+}
+
+.wrapper {
+    /* border: 1px solid #48CFCB; */
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    color: #F5F5F5;
+    margin-bottom: 3rem;
     font-size: 3rem;
 }
 
-h2 {
-    text-align: right;
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-h3 {
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 2rem;
+.list__item {
+    padding: 1rem;
+    background-color: transparent;
+    color: #48CFCB;
+    border: 1px solid #229799;
+    border-bottom-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-ul {
-    list-style-type: circle;
+.list__item:hover {
+    background-color: #F5F5F5;
+    color: #229799;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    transition: 
+        border-bottom-right-radius .2s,
+        border-top-left-radius .2s,
+        background-color .5s,
+        color 1s;
 }
 
-ul li {
-    letter-spacing: 10px;
-}
-
-ol {
-    width: 90%;
-}
-
-ol li {
-    color:darkseagreen;
-    padding-left: 3rem;
-}
-
-p {
-    line-height: 2rem;
-    font-weight: 600;
-}
-
-img {
-    width: 30%;
-    display: block;
-    margin: auto;
-}
-
-a {
+.list__link {
+    color: #48CFCB;
     text-decoration: none;
-    color:darkred;
-}
-
-a:visited {
-    color:chocolate;
-}
-
-a:hover {
-    cursor:crosshair;
+    font-weight: 700;
 }
